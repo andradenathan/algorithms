@@ -3,17 +3,18 @@ numeros = ''
 for i in range(casos):
   resposta = ''
   k = 0
-  j = 1
-  numeros = list(input())
-  numeros.sort()
+  n = 1
+  numeros = input().split()
+  for j in numeros:
+    numeros = sorted(j)
+    
   while '0' in numeros:
-    id = numeros.index('0')
-    del numeros[id]
+    numeros.remove('0')
     k += 1
-  
-  while j <= k:
-    numeros.insert(j, '0')
-    j += 1
+
+  while n <= k:
+    numeros.insert(n, '0')
+    n += 1
 
   resposta = resposta.join(numeros)
   print(resposta)
