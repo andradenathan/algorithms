@@ -3,8 +3,7 @@
 
 void rotate(int* nums, int numsSize, int k) {
   int* arr;
-  int temp;
-  k %= numsSize; 
+  int temp; 
   arr = malloc(sizeof(int) * numsSize);
 
   // shifting elems to the last position
