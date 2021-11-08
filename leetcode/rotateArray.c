@@ -1,13 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void rotate(int* nums, int numsSize, int k) {
-  for(int i = 0; i < k; i++) {
-    int temp = nums[numsSize - 1];
-    for(int j = numsSize - 1; j > 0; j--) {
-      nums[j] = nums[j-1];
-    }
-    nums[0] = temp;
-  }
+  int* arr;
+  int temp;
+  k %= numsSize; 
+  arr = malloc(sizeof(int) * numsSize);
+
+  // shifting elems to the last position
+  for(int i = 0; i < numsSize - k; i++)
+    arr[i+k] = nums[i];
+
+  // adding the last k's values
+  for(int i = 0; i < k; i++) 
+    arr[i] = nums[numsSize - k + i];
+
+  for(int i = 0; i < numsSize; i++)
+    nums[i] = arr[i];
 }
 
 int main() {
