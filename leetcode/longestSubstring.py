@@ -7,4 +7,5 @@ def lengthOfLongestSubstring(s: str) -> int:
 
   return len(arr)
 
+# it still getting the subsequence in this case but not the substring
 print(lengthOfLongestSubstring("pwwkew"))
