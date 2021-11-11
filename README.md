@@ -5,7 +5,7 @@ This is a repository for all of my algorithms solved in online platforms.
 - Problems solved in Hacker Rank based on "FAANG interview's problems" writing codes mainly like Python and eventually in C++.
 
 ## Leetcode
-- Writing codes for an event of dailies algorithms problems which have challenges of Complexity and Data Structure from Facebook, Microsoft and Amazon. Most of the problems was wrote in C and the Python ones was designed as pseudocode. 
+- Writing codes for an event of dailies algorithms problems which have challenges of Complexity and Data Structure from Facebook, Microsoft and Amazon. Most of the problems was wrote in C and Python. 
 
 
 ## URI Online Judge
