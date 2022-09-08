@@ -29,6 +29,6 @@ def merge_sort(arr: list):
             index_arr += 1
 
 if __name__ == '__main__':
-    arr = [7, 0, 3, 134, 22, 250, 123490, 66, 5, 13]
+    arr = [4, 123, 43, 31, 25, 3, 76, 2022, 125, 315]
     merge_sort(arr)
     print(arr)
