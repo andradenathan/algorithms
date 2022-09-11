@@ -1,3 +1,7 @@
+from random import randint, random
+
+MAX_SIZE = 500
+
 def partition(arr, left, right):
     pivot = arr[right]
     index = left - 1
@@ -17,7 +21,14 @@ def quick_sort(arr: list, left: int, right: int):
         quick_sort(arr, left, pivot-1)
         quick_sort(arr, pivot+1, right)
 
+
+def array_init():
+    arr = []
+    for _ in range(MAX_SIZE):
+        arr.append(int(randint(0, 1000) * random()))
+    return arr
+
 if __name__ == "__main__":
-    arr = [4, 123, 43, 31, 25, 3, 76, 2022, 125, 315]
+    arr = array_init()
     quick_sort(arr, 0, len(arr)-1)
     print(arr)

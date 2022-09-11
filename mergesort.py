@@ -1,3 +1,7 @@
+from random import randint, random
+
+MAX_SIZE = 1000
+
 def merge_sort(arr: list):
     if len(arr) > 1:
         mid = len(arr) // 2
@@ -28,7 +32,14 @@ def merge_sort(arr: list):
             index_right += 1
             index_arr += 1
 
+def array_init():
+    arr = []
+    for _ in range(MAX_SIZE):
+        arr.append(int(randint(0, 1000) * random()))
+    return arr
+
+
 if __name__ == '__main__':
-    arr = [4, 123, 43, 31, 25, 3, 76, 2022, 125, 315]
+    arr = array_init()
     merge_sort(arr)
     print(arr)
