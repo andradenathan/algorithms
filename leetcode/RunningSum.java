@@ -9,10 +9,9 @@ public class RunningSum {
 
     public static int[] runningSum(int[] nums) {
         int[] result = new int[nums.length];
-        result[0] = nums[0];
-        int pos = 1;
+        int pos = 0;
         while(pos < result.length) {
-            int sum = IntStream.range(0, pos+1).map(index -> nums[index]).sum();
+            int sum = Arrays.stream(nums, 0, pos + 1).sum();
             result[pos] = sum;
             pos++;
         }
